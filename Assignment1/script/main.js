@@ -1,11 +1,15 @@
-var displayedImage = document.querySelector('.displayed-img');
-var thumbBar = document.querySelector('.thumb-bar');
+var displayedImage = document.querySelector('.displayed-img');                  
+var thumbBar = document.querySelector('.thumb-bar');                            
 
 var btn = document.querySelector('button');
 var overlay = document.querySelector('.overlay');
-var path = "./images/";
-var file = ["pic1.jpg", "pic2.jpg", "pic3.jpg", "pic4.jpg", "pic5.jpg"] ;
+var path = "./images/";                                                   //path to the image folder
+var file = ["pic1.jpg", "pic2.jpg", "pic3.jpg", "pic4.jpg", "pic5.jpg"] ; //file names to be read
 
+/*
+* A loop to read all files from given folder
+* and adds a thumbnail for each image
+*/
 for (var i =0; i < file.length ;i++){
   var img = document.createElement('img');
   var imgPath = path + file[i];
